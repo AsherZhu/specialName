@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>用户名</title>
+    <meta charset="utf-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.3/css/bootstrap.min.css" type="text/css"
+          rel="stylesheet"/>
+    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+            type="application/javascript"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/toastr.js/2.1.4/toastr.min.css" type="text/css"
+          rel="stylesheet"/>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/toastr.js/2.1.4/toastr.min.js"
+            type="application/javascript"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+    <h5>用户名</h5>
+    <form action="#" class="was-validated">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" id="username" placeholder="请输入用户名" required>
+
+        <button class="btn btn-primary" id="creat" onclick="creat()" type="button">生成</button>
+        <button class="btn btn-danger" id="clean" onclick="clean()" type="button">清空</button>
+        <div class="valid-feedback">有效的。</div>
+        <div class="invalid-feedback">请填写此字段。</div>
+    </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-6">
+            <div onclick="onclickGroup(this)">
+                <h5>
+                    <button class="btn btn-success" type="button">弱者安卓 点此 一键复制</button>
+                </h5>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="wzad1" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="wzad2" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="wzad3" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+
+            <div onclick="onclickGroup(this)">
+                <h5>
+                    <button class="btn btn-success" type="button">弱者苹果 点此 一键复制</button>
+                </h5>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="wzios1" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="wzios2" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="wzios3" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+
+            <div onclick="onclickGroup(this)">
+                <h5>
+                    <button class="btn btn-success" type="button">驱逐安卓 点此 一键复制</button>
+                </h5>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="smad1" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="smad2" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="smad3" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+
+            <div onclick="onclickGroup(this)">
+                <h5>
+                    <button class="btn btn-success" type="button">驱逐苹果 点此 一键复制</button>
+                </h5>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="smios1" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="smios2" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="smios3" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+
+            <div onclick="onclickGroup(this)">
+                <h5>
+                    <button class="btn btn-success" type="button">OLO安卓 点此 一键复制</button>
+                </h5>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="lolad1" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="lolad2" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" id="lolad3" data-bs-toggle="tooltip" title="太棒了！"
+                               onclick="onclickInput(this)"
+                               placeholder="点击生成">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+
+
+</div>
+
+
+<script>
+    $(function () {
+            toastr.options = messageOpts;
+        }
+    )
+
+    function creat() {
+        let value = $("#username").val();
+        if (value === null || value.length < 1) {
+            toastr.error("请填写用户名！", "生成失败！");
+            return
+        }
+        setValue(value);
+    }
+
+    function clean() {
+        $("input").val("");
+    }
+
+    function setValue(value) {
+        $("#wzad1").val("⁠" + value + "⁠⁠⁠");
+        $("#wzad2").val("⁠⁠" + value + "⁠⁠");
+        $("#wzad3").val("⁠⁠⁠" + value + "⁠");
+
+        $("#wzios1").val("⁠" + value + "⁠⁠⁠");
+        $("#wzios2").val("⁠⁠" + value + "⁠⁠");
+        $("#wzios3").val("⁠⁠⁠" + value + "⁠");
+
+        $("#smad1").val("" + value + "");
+        $("#smad2").val("" + value + "");
+        $("#smad3").val("" + value + "");
+
+        $("#smios1").val("ؘ" + value + "ؘؘؘ");
+        $("#smios2").val("ؘؘ" + value + "ؘؘ");
+        $("#smios3").val("ؘ" + value + "ؘؘؘ");
+
+        $("#lolad1").val("゗" + value + "゗゗゗");
+        $("#lolad2").val("゗゗" + value + "゗゗");
+        $("#lolad3").val("゗゗゗" + value + "゗");
+
+        toastr.info("生成成功！", "恭喜");
+
+    }
+
+
+    function onclickInput(obj) {
+
+        let value = $(obj).val();
+        console.log(value);
+    }
+
+    function onclickGroup(obj) {
+
+        //获取元素，为数组
+        let input1 = $(obj).siblings().children().children().children();
+
+        let text = "";
+        for (let i = 0; i < input1.length; i++) {
+            if ($(input1[i]).val() === null || $(input1[i]).val().length < 1) {
+                toastr.error("输入用户名点击生成！", "复制失败！");
+                return
+            }
+            text = text + $(input1[i]).val() + "\r\n";
+        }
+        text = text + "随机三行，复制其中一行就可以了"
+        console.log(text);
+        copy(text);
+    }
+
+    //复制到粘贴板
+    function copy(text) {
+        // text是复制文本
+        // 创建input元素
+        const textarea = document.createElement('textarea')
+        // 给input元素赋值需要复制的文本
+        textarea.value = text
+        // 将input元素插入页面
+        document.body.appendChild(textarea)
+        // 选中input元素的文本
+        textarea.select()
+        // 复制内容到剪贴板
+        document.execCommand('copy')
+        // 删除input元素
+        document.body.removeChild(textarea)
+        toastr.success("复制成功！", "恭喜");
+    }
+
+    let messageOpts = {
+        "progressBar": true,
+        "positionClass": "toast-bottom-full-width",// 是否显示关闭按钮
+
+    };
+
+
+</script>
+</body>
+</html>
