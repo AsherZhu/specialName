@@ -20,14 +20,14 @@
 <div class="container mt-3">
     <h5>用户名</h5>
     <div action="#" class="was-validated">
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" id="username" placeholder="请输入用户名" required>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="username" placeholder="请输入用户名" required>
 
-        <button class="btn btn-primary" id="creat" onclick="creat()" type="button">生成</button>
-        <button class="btn btn-danger" id="clean" onclick="clean()" type="button">清空</button>
-        <div class="valid-feedback">有效的。</div>
-        <div class="invalid-feedback">请填写此字段。</div>
-    </div>
+            <button class="btn btn-primary" id="creat" onclick="creat()" type="button">生成</button>
+            <button class="btn btn-danger" id="clean" onclick="clean()" type="button">清空</button>
+            <div class="valid-feedback">有效的。</div>
+            <div class="invalid-feedback">请填写此字段。</div>
+        </div>
     </div>
     <div class="row">
         <div class="col-sm-6">
@@ -223,7 +223,13 @@
             toastr.error("请填写用户名！", "生成失败！");
             return
         }
+        if (value.length >= 6) {
+            toastr.error("用户名不能超过5位！", "生成失败！");
+
+        }
         setValue(value);
+        // console.log(randomNum(0,value))
+
     }
 
     function clean() {
@@ -231,33 +237,77 @@
     }
 
     function setValue(value) {
-        $("#wzad1").val("⁠" + value + "⁠⁠⁠");
-        $("#wzad2").val("⁠⁠" + value + "⁠⁠");
-        $("#wzad3").val("⁠⁠⁠" + value + "⁠");
+        let wzad = "⁠"
+        let wzios = "⁠"
 
-        $("#wzios1").val("⁠" + value + "⁠⁠⁠");
-        $("#wzios2").val("⁠⁠" + value + "⁠⁠");
-        $("#wzios3").val("⁠⁠⁠" + value + "⁠");
+        let smad = "⁠"
+        let smios = "⁠"
 
-        $("#smad1").val("" + value + "");
-        $("#smad2").val("" + value + "");
-        $("#smad3").val("" + value + "");
+        let lolad = "⁠"
 
-        $("#smios1").val("ؘ" + value + "ؘؘؘ");
-        $("#smios2").val("ؘؘ" + value + "ؘؘ");
-        $("#smios3").val("ؘ" + value + "ؘؘؘ");
 
-        $("#lolad1").val("゗" + value + "゗゗゗");
-        $("#lolad2").val("゗゗" + value + "゗゗");
-        $("#lolad3").val("゗゗゗" + value + "゗");
+        $("#wzad1").val(splicingValue(value, wzad));
+        $("#wzad2").val(splicingValue(value, wzad));
+        $("#wzad3").val(splicingValue(value, wzad));
+
+
+        $("#wzios1").val(splicingValue(value, wzios));
+        $("#wzios2").val(splicingValue(value, wzios));
+        $("#wzios3").val(splicingValue(value, wzios));
+
+        $("#smad1").val(splicingValue(value, smad));
+        $("#smad2").val(splicingValue(value, smad));
+        $("#smad3").val(splicingValue(value, smad));
+
+        $("#smios1").val(splicingValue(value, smios));
+        $("#smios2").val(splicingValue(value, smios));
+        $("#smios3").val(splicingValue(value, smios));
+
+        $("#lolad1").val(splicingValue(value, lolad));
+        $("#lolad2").val(splicingValue(value, lolad));
+        $("#lolad3").val(splicingValue(value, lolad));
 
         toastr.info("生成成功！", "恭喜");
 
     }
 
+    //开始拼接
+    function splicingValue(value, symbol) {
+        let totalLength = 6;
+        let totalSymbol = totalLength - value.length;
+        for (let i = 0; i < totalSymbol; i++) {
+            value = insertStr(value, randomNum(0, value.length), symbol);
+
+        }
+        return value;
+    }
+
+    //范围生成随机正整数
+    function randomNum(minNum, maxNum) {
+        switch (arguments.length) {
+            case 1:
+                return parseInt(Math.random() * minNum + 1, 10);
+                break;
+            case 2:
+                return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                break;
+            default:
+                return 0;
+                break;
+        }
+    }
+
+    //
+    /**
+     *  souece 原字符串 start 要截取的位置 newStr 要插入的字符
+     * @param {number} start
+     * @param {*} newStr
+     */
+    function insertStr(source, start, newStr) {
+        return source.slice(0, start) + newStr + source.slice(start)
+    }
 
     function onclickInput(obj) {
-
         let value = $(obj).val();
         console.log(value);
     }
