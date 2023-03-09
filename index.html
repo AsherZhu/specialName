@@ -225,7 +225,7 @@
         }
         if (value.length >= 6) {
             toastr.error("用户名不能超过5位！", "生成失败！");
-
+            return
         }
         setValue(value);
         // console.log(randomNum(0,value))
