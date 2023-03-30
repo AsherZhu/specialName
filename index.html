@@ -33,7 +33,7 @@
         <div class="col-sm-6">
             <div onclick="onclickGroup(this)">
                 <h5>
-                    <button class="btn btn-success" type="button">弱者安卓 点此 一键复制</button>
+                    <button class="btn btn-success" type="button">召唤安卓 点此 一键复制</button>
                 </h5>
             </div>
             <div class="row">
@@ -68,7 +68,7 @@
 
             <div onclick="onclickGroup(this)">
                 <h5>
-                    <button class="btn btn-success" type="button">弱者苹果 点此 一键复制</button>
+                    <button class="btn btn-success" type="button">王者苹果 点此 一键复制</button>
                 </h5>
             </div>
             <div class="row">
@@ -103,7 +103,7 @@
 
             <div onclick="onclickGroup(this)">
                 <h5>
-                    <button class="btn btn-success" type="button">驱逐安卓 点此 一键复制</button>
+                    <button class="btn btn-success" type="button">召唤安卓 点此 一键复制</button>
                 </h5>
             </div>
             <div class="row">
@@ -137,7 +137,7 @@
 
             <div onclick="onclickGroup(this)">
                 <h5>
-                    <button class="btn btn-success" type="button">驱逐苹果 点此 一键复制</button>
+                    <button class="btn btn-success" type="button">召唤苹果 点此 一键复制</button>
                 </h5>
             </div>
             <div class="row">
@@ -172,7 +172,7 @@
 
             <div onclick="onclickGroup(this)">
                 <h5>
-                    <button class="btn btn-success" type="button">OLO安卓 点此 一键复制</button>
+                    <button class="btn btn-success" type="button">LOL安卓 点此 一键复制</button>
                 </h5>
             </div>
             <div class="row">
@@ -236,14 +236,41 @@
         $("input").val("");
     }
 
+    function wzadName() {
+        let name = ['⁠', '⁣', '⁠', '⁠', '', '', '']
+        return name[randomNum(0, name.length-1)]
+    }
+
+    function wziosName() {
+        let name = ['⁠', '⁣', '⁠', '⁠']
+        return name[randomNum(0, name.length-1)]
+    }
+
+    function smadName() {
+        let name = ['', '', '']
+        return name[randomNum(0, name.length-1)]
+    }
+
+    function smiosName() {
+        let name = ['ؘ', 'ؘ']
+        return name[randomNum(0, name.length-1)]
+    }
+
+    function loladName() {
+        let name = ['゗']
+        return name[randomNum(0, name.length-1)]
+    }
+
+
     function setValue(value) {
-        let wzad = "⁠"
-        let wzios = "⁠"
+        wzadName();
+        let wzad = wzadName();
+        let wzios = wziosName();
 
-        let smad = ""
-        let smios = "ؘ"
+        let smad = smadName();
+        let smios = smiosName();
 
-        let lolad = "゗"
+        let lolad = loladName();
 
 
         $("#wzad1").val(splicingValue(value, wzad));
@@ -277,7 +304,6 @@
         let totalSymbol = totalLength - value.length;
         for (let i = 0; i < totalSymbol; i++) {
             value = insertStr(value, randomNum(0, value.length), symbol);
-
         }
         return value;
     }
