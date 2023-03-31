@@ -236,73 +236,54 @@
         $("input").val("");
     }
 
-    function wzadName() {
-        let name = ['⁠', '⁣', '⁠', '⁠', '', '', '']
-        return name[randomNum(0, name.length-1)]
-    }
 
-    function wziosName() {
-        let name = ['⁠', '⁣', '⁠', '⁠']
-        return name[randomNum(0, name.length-1)]
-    }
-
-    function smadName() {
-        let name = ['', '', '']
-        return name[randomNum(0, name.length-1)]
-    }
-
-    function smiosName() {
-        let name = ['ؘ', 'ؘ']
-        return name[randomNum(0, name.length-1)]
-    }
-
-    function loladName() {
-        let name = ['゗']
-        return name[randomNum(0, name.length-1)]
+    function randomName(name) {
+        return name[randomNum(0, name.length - 1)]
     }
 
 
     function setValue(value) {
 
-        let wzad = wzadName();
-        let wzios = wziosName();
+        let wzad = ['⁠', '⁣', '⁠', '⁠', '', '', ''];
+        let wzios = ['⁠', '⁣', '⁠', '⁠'];
 
-        let smad = smadName();
-        let smios = smiosName();
+        let smad = ['', '', ''];
+        let smios = ['ؘ', 'ؘ'];
 
-        let lolad = loladName();
+        let lolad = ['゗'];
 
-        $("#wzad1").val(splicingValue(value, wzadName()));
-        $("#wzad2").val(splicingValue(value, wzadName()));
-        $("#wzad3").val(splicingValue(value, wzadName()));
+        $("#wzad1").val(splicingValue(value, wzad));
+        $("#wzad2").val(splicingValue(value, wzad));
+        $("#wzad3").val(splicingValue(value, wzad));
 
 
-        $("#wzios1").val(splicingValue(value, wziosName()));
-        $("#wzios2").val(splicingValue(value, wziosName()));
-        $("#wzios3").val(splicingValue(value, wziosName()));
+        $("#wzios1").val(splicingValue(value, wzios));
+        $("#wzios2").val(splicingValue(value, wzios));
+        $("#wzios3").val(splicingValue(value, wzios));
 
-        $("#smad1").val(splicingValue(value, smadName()));
-        $("#smad2").val(splicingValue(value, smadName()));
-        $("#smad3").val(splicingValue(value, smadName()));
+        $("#smad1").val(splicingValue(value, smad));
+        $("#smad2").val(splicingValue(value, smad));
+        $("#smad3").val(splicingValue(value, smad));
 
-        $("#smios1").val(splicingValue(value,  smiosName()));
-        $("#smios2").val(splicingValue(value,  smiosName()));
-        $("#smios3").val(splicingValue(value,  smiosName()));
+        $("#smios1").val(splicingValue(value, smios));
+        $("#smios2").val(splicingValue(value, smios));
+        $("#smios3").val(splicingValue(value, smios));
 
-        $("#lolad1").val(splicingValue(value, loladName()));
-        $("#lolad2").val(splicingValue(value, loladName()));
-        $("#lolad3").val(splicingValue(value, loladName()));
+        $("#lolad1").val(splicingValue(value, lolad));
+        $("#lolad2").val(splicingValue(value, lolad));
+        $("#lolad3").val(splicingValue(value, lolad));
 
         toastr.info("生成成功！", "恭喜");
 
     }
+
 
     //开始拼接
     function splicingValue(value, symbol) {
         let totalLength = 6;
         let totalSymbol = totalLength - value.length;
         for (let i = 0; i < totalSymbol; i++) {
-            value = insertStr(value, randomNum(0, value.length), symbol);
+            value = insertStr(value, randomNum(0, value.length), randomName(symbol));
         }
         return value;
     }
