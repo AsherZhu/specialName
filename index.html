@@ -263,7 +263,7 @@
 
 
     function setValue(value) {
-        wzadName();
+
         let wzad = wzadName();
         let wzios = wziosName();
 
@@ -273,26 +273,26 @@
         let lolad = loladName();
 
 
-        $("#wzad1").val(splicingValue(value, wzad));
-        $("#wzad2").val(splicingValue(value, wzad));
-        $("#wzad3").val(splicingValue(value, wzad));
+        $("#wzad1").val(splicingValue(value, wzadName()));
+        $("#wzad2").val(splicingValue(value, wzadName()));
+        $("#wzad3").val(splicingValue(value, wzadName()));
 
 
-        $("#wzios1").val(splicingValue(value, wzios));
-        $("#wzios2").val(splicingValue(value, wzios));
-        $("#wzios3").val(splicingValue(value, wzios));
+        $("#wzios1").val(splicingValue(value, wziosName()));
+        $("#wzios2").val(splicingValue(value, wziosName()));
+        $("#wzios3").val(splicingValue(value, wziosName()));
 
-        $("#smad1").val(splicingValue(value, smad));
-        $("#smad2").val(splicingValue(value, smad));
-        $("#smad3").val(splicingValue(value, smad));
+        $("#smad1").val(splicingValue(value, smadName()));
+        $("#smad2").val(splicingValue(value, smadName()));
+        $("#smad3").val(splicingValue(value, smadName()));
 
-        $("#smios1").val(splicingValue(value, smios));
-        $("#smios2").val(splicingValue(value, smios));
-        $("#smios3").val(splicingValue(value, smios));
+        $("#smios1").val(splicingValue(value,  smiosName()));
+        $("#smios2").val(splicingValue(value,  smiosName()));
+        $("#smios3").val(splicingValue(value,  smiosName()));
 
-        $("#lolad1").val(splicingValue(value, lolad));
-        $("#lolad2").val(splicingValue(value, lolad));
-        $("#lolad3").val(splicingValue(value, lolad));
+        $("#lolad1").val(splicingValue(value, loladName()));
+        $("#lolad2").val(splicingValue(value, loladName()));
+        $("#lolad3").val(splicingValue(value, loladName()));
 
         toastr.info("生成成功！", "恭喜");
 
